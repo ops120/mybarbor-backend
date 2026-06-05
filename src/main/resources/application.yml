@@ -1,7 +1,7 @@
-﻿spring:
+spring:
   application:
     name: k8s-demo-backend
-  
+
   datasource:
     url: jdbc:mysql://mysql-service:3306/k8s_demo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
@@ -13,7 +13,7 @@
       connection-timeout: 30000
       idle-timeout: 600000
       max-lifetime: 1800000
-  
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,7 +21,7 @@
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-  
+
   data:
     redis:
       host: redis-service

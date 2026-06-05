@@ -1,4 +1,4 @@
-﻿package com.example.demo.controller;
+package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -88,12 +88,12 @@ public class DemoController {
     @GetMapping("/pod-info")
     public ResponseEntity<Map<String, Object>> podInfo() {
         Map<String, Object> response = new HashMap<>();
-        
+
         response.put("podName", System.getenv().getOrDefault("POD_NAME", "unknown"));
         response.put("podIp", System.getenv().getOrDefault("POD_IP", "unknown"));
         response.put("namespace", System.getenv().getOrDefault("POD_NAMESPACE", "default"));
         response.put("nodeName", System.getenv().getOrDefault("NODE_NAME", "unknown"));
-        
+
         return ResponseEntity.ok(response);
     }
 }
